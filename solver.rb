@@ -31,6 +31,19 @@ class Solver
 
   end
 
+  def fizzbuzz (val)
+    n=val
+    if n % 3 == 0 && n % 5 == 0 
+      result="FizzBuzz"
+    elsif n % 3 == 0 
+      result = "Fizz"
+    elsif n % 5 == 0 
+      result = "Buzz"
+    else 
+      result = n.to_s
+    end
+  end
+
 end
 
 puts Solver.new.reverse('hello')
