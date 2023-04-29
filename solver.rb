@@ -17,5 +17,20 @@ class Solver
 
   end
 
+  def reverse (str)
+    i=0
+    j=str.length
+    while i<j do
+       temp=str[i]
+       str[i]=str[j]
+       str[j]=temp
+       i++
+       j--
+    end
+    str
+
+  end
+
 end
 
+puts Solver.new.reverse('hello')
