@@ -11,7 +11,7 @@ describe 'Solver' do
       allow(solver_mock).to receive(:fizzbuzz).with(5).and_return('buzz')
       allow(solver_mock).to receive(:fizzbuzz).with(15).and_return('fizzbuzz')
       expect(solver_class.factorial(3)).to eq(6)
-      expect(solver_mock.reverse('hello')).to eq('olleh')
+      expect(solver_class.reverse('hello')).to eq('olleh')
       expect(solver_mock.fizzbuzz(3)).to eq('fizz')
       expect(solver_mock.fizzbuzz(5)).to eq('buzz')
       expect(solver_mock.fizzbuzz(15)).to eq('fizzbuzz')
