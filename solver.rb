@@ -1,26 +1,21 @@
 class Solver
-  def factorial (n)
-    
-    if (n<0) 
-       raise Exception.new "Negative number not accepted"
+  def factorial(value)
+    n = value
+    raise Exception, 'Negative number not accepted' if n.negative?
+
+    return 1 if [0, 1].include?(n)
+
+    i = 1
+    fac = 1
+
+    while i <= n
+      fac *= i
+      i += 1
     end
 
-    if (n==0 || n==1) 
-      return 1
-    end
-
-    i=1
-    fac=1
-
-    while (i<=n) do
-       fac*=i
-       i++
-    end
-
-    return fac
+    fac
 
   end
-  
+
 end
 
-puts Solver.new.factorial(3)
